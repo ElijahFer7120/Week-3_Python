@@ -2,18 +2,32 @@
 Week 3 assignment 1
 
 Purpose:
-Shows how a function names repeated logic and makes the code easier to reuse
+Show that functions can separate responsibilities in a small program.
+
+developer notes
+i'm going for a video game style system to make it more relatable for myself. 
 """
 
 
 
-def calculate_total(price, tax_rate):
-    tax_amount = price * tax_rate
-    total = price + tax_amount
-    return total
+def calculate_average(score_1, score_2, score_3):
+    total = score_1 + score_2 + score_3
+    average = total / 3
+    return average
 
-global_tax_rate = 0.035
+def get_status(average):
+    if average >= 1500:
+        return "Accepted"
+    else:
+        return "Rejected"
+    
+def show_results(player_name, average, status):
+    print("Player:", player_name)
+    print("Average Score:", average)
+    print("Status:", status)
+    
 
-prime_changer_mirage = calculate_total(19.21, global_tax_rate)
-Metal_Cardbot_BlackHook = calculate_total(39.99, global_tax_rate)
-disney_pixar_cars_value = calculate_total(16.99,global_tax_rate)
+name = "Nitrozeus"
+average_score = calculate_average(1500, 1600, 1700)
+student_status = get_status(average_score)
+show_results(name, average_score, student_status)
