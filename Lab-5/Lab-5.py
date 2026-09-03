@@ -26,5 +26,5 @@ for engine in diecast_engines:
         status = "owned"
     else:
         status = "not owned"
-
+#this went from print( to a status variable to make it easy to read
     print(engine["name"], "is", engine["status"])
