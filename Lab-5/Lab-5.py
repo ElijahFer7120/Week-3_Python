@@ -20,7 +20,7 @@ diecast_engines = [
     {"name": "diesel", "status": "not_owned"},
     {"name": "oliver", "status": "owned"},
 ]
-#got help with AI for listing the characters here 
+#got help with AI for listing the characters here, it did gave a bunch of unnecessary info and entries in the list which i then changed and removed. 
 for engine in diecast_engines:
     if engine["status"] == "owned":
         status = "owned"
